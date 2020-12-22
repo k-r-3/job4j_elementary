@@ -10,4 +10,3 @@ public class Matrix {
         }
         return table;
     }
-}
