@@ -1,7 +1,5 @@
 package ru.job4j.condition;
 
-import org.jetbrains.annotations.NotNull;
-
 public class N {
     public static boolean check(String l, String r) {
         if (l.isEmpty() && r.isEmpty()) {
