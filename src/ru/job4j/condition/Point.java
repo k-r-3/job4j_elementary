@@ -1,18 +1,25 @@
 package ru.job4j.condition;
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
 
 public class Point {
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt((Math.pow((x2 - x1), 2) + (Math.pow((y2 - y1), 2))));
+    private int x;
+
+    private int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double distance(Point another) {
+        return sqrt((pow((this.x - another.x), 2) + (pow((this.y - another.y), 2))));
     }
 
     public static void main(String[] args) {
-        double result = Point.distance(0, 0, 2, 0);
-        System.out.println("result (0, 0) to (2, 0) " + result);
-        result = Point.distance(1, 0, 2, 0);
-        System.out.println("result (1, 0) to (2, 0) " + result);
-        result = Point.distance(1, 1, 2, 1);
-        System.out.println("result (1, 1) to (2, 1) " + result);
-        result = Point.distance(2, 0, 2, 2);
-        System.out.println("result (2, 0) to (2, 2) " + result);
+        Point a = new Point(1, 1);
+        Point b = new Point(2, 1);
+        double distance = a.distance(b);
+        System.out.println(distance);
     }
 }
