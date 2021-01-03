@@ -42,7 +42,7 @@ public class PointTest {
     }
 
     @Test
-    public void whenThen112to120then2() {
+    public void whenThen112to120then2Point24() {
         double expected = 2.24;
         Point first = new Point(1, 1, 2);
         Point second = new Point(1, 2, 0);
